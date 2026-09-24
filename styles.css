@@ -5,8 +5,8 @@ body { margin:0; font-family:Arial,sans-serif; color:var(--ink); }
 .skip-link:focus { top:.5rem; }
 .site-header { padding:var(--space); background:var(--brand); color:var(--paper); }
 .brand { color:inherit; font-size:1.2rem; font-weight:700; }
-.menu-button { /* TODO: style a comfortable, visible target. */ }
-.nav-list { list-style:none; margin:.75rem 0 0; padding:0; /* TODO: narrow layout. */ }
+.menu-button { padding:.75rem 1rem; border:2px solid var(--paper); background:var(--brand); color:var(--paper); font:inherit; cursor:pointer; }
+.nav-list { display:flex; flex-direction:column; gap:.25rem; list-style:none; margin:.75rem 0 0; padding:0; }
 .nav-list a { display:block; color:var(--paper); padding:.75rem; }
 /* TODO: hover, focus-visible, active, and current-page states. */
 /* TODO: hide the collapsed list only after JS adds the .js class. */
