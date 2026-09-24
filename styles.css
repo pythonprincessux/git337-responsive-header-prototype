@@ -8,7 +8,10 @@ body { margin:0; font-family:Arial,sans-serif; color:var(--ink); }
 .menu-button { padding:.75rem 1rem; border:2px solid var(--paper); background:var(--brand); color:var(--paper); font:inherit; cursor:pointer; }
 .nav-list { display:flex; flex-direction:column; gap:.25rem; list-style:none; margin:.75rem 0 0; padding:0; }
 .nav-list a { display:block; color:var(--paper); padding:.75rem; }
-/* TODO: hover, focus-visible, active, and current-page states. */
+.nav-list a:hover { background:var(--paper); color:var(--brand); }
+.nav-list a:focus-visible, .menu-button:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+.nav-list a:active { background:var(--accent); color:var(--ink); }
+.nav-list a[aria-current="page"] { font-weight:700; text-decoration:underline; }
 /* TODO: hide the collapsed list only after JS adds the .js class. */
 main { max-width:65rem; margin:auto; padding:1rem; }
 /* TODO: add one content-driven, relative-unit breakpoint and wide layout. */
