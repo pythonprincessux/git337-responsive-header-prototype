@@ -8,5 +8,13 @@ function setMenu(open) {
     button.setAttribute("aria-expanded", String(open));
     list.dataset.open = String(open);
 }
-// TODO 3: toggle that function when the native button is activated.
-// TODO 4: when Escape is pressed while open, close and return focus to the button.
+button.addEventListener("click", () => {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    setMenu(!isOpen);
+});
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && button.getAttribute("aria-expanded") === "true") {
+        setMenu(false);
+        button.focus();
+    }
+});
